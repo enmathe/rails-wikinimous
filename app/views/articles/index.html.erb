@@ -1,0 +1,16 @@
+<div>
+  <h1>Wikinimous</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-4">
+      <%@articles.each do |article| %>
+      <div class="article">
+        <h5> <%= link_to article.title, article_path(article) %> </h5>
+      <p><%= article.content %></p>
+      </div>
+      <%end %>
+    </div>
+  </div>
+</div>
+
